@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Poppins:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap&subset=latin');
+
+@import "tailwindcss";
+
+/* base change*/
+ @layer base {
+  h1, h2, h3, h4, h5 {
+    font-family:"font-poppins";
+  }
+
+  body {
+    font-family:"font-fredoka";
+  }
+
+  p, span {
+    font-family:"font-roboto";
+  }
+} 
+
+/* classes */
+@layer utilities{ 
+
+  .font-poppins{
+   font-family:"Poppins",sans-serif;
+  }
+
+  .font-fredoka{
+   font-family: "Fredoka",sans-serif;
+  }
+
+  .font-roboto{
+    font-family: "Roboto",sans-serif;
+  }
+}
