@@ -114,7 +114,7 @@ function Buy() {
     status:paymentIntent.status
   }
   console.log("payment Info",paymentInfo)
-  await axios.post("http://localhost:3000/api/v1/order",paymentInfo,{
+  await axios.post(`${BACKEND_URL}/order`,paymentInfo,{
     headers:{
       Authorization:`Bearer ${token}` // when uses middleware then pass in body have to header(means token)
     },

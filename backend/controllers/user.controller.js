@@ -65,7 +65,7 @@ export const login= async(req,res)=>{
           expires:new Date(Date.now()+ 24*60*60*1000) ,// for 1 day
           httpOnly:true, // can't be access js directory
           secure:process.env.NODE_ENV==="production", // true for https only
-          sameSite:'Strict' // prevents CSRF attact (cross-site cookies sending)
+          sameSite:'None' // prevents CSRF attact (cross-site cookies sending)
         }
         res.cookie("jwt",token,cookieOptions)
 

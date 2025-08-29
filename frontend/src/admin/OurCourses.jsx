@@ -29,7 +29,7 @@ function OurCourses() {
        }
   }
     fetchCourses()
-  },[])
+  },[BACKEND_URL])
   
   // delete course code
   

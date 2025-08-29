@@ -28,7 +28,7 @@ function AdminLogin() {
        toast.success(response.data.message)
        console.log("Login successfull",response.data)
        navigate("/admin/dashboard")
-       window.location.reload()
+      //  window.location.reload()
     
 
   }catch (error) {
@@ -50,7 +50,7 @@ function AdminLogin() {
          {/* Header */}
         <header className='flex justify-between items-center w-full absolute top-0 p-5'>
          <div className='flex items-center space-x-2'>
-          <img src={logo} alt="" className='h=10 w-10 rounded-full' />
+          <img src={logo} alt="" className='h-10 w-10 rounded-full' />
           <h1 className='text-2xl font-bold text-orange-500'>CourseHub</h1>
          </div>
          <div  className='space-x-4 '> 

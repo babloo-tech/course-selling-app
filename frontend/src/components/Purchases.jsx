@@ -59,7 +59,7 @@ function Purchases() {
       headers:{
         Authorization:`Bearer ${token}`
       },
-       withCredentials:true
+      
     })
      setPurchase(response.data.courseData)
      setLoading(false)
