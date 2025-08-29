@@ -40,10 +40,10 @@ try{
 }
 
 // define routes global
-app.use("/api/v1/course", courseRoute) 
-app.use("/api/v1/user",userRoute)
-app.use("/api/v1/admin",adminRoute)
-app.use("/api/v1/order",orderRoute)
+app.use("/course", courseRoute) 
+app.use("/user",userRoute)
+app.use("/admin",adminRoute)
+app.use("/order",orderRoute)
 
  // Cloudinary Configuration code
   cloudinary.config({ 
