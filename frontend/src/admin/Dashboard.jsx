@@ -3,9 +3,9 @@ import logo from '../assets/logo.webp'
 import { Link } from 'react-router-dom'
 import axios from 'axios';
 import toast from 'react-hot-toast';
-import { BACKEND_URL } from '../utils/utils';
-function Dashboard() {
 
+function Dashboard() {
+const  BACKEND_URL= import.meta.env.VITE_API_URL;
 const handleLogout = async () => {
   try {
     const response = await axios.get(`${BACKEND_URL}/admin/logout`, {

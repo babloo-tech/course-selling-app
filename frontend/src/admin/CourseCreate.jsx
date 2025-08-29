@@ -3,9 +3,9 @@ import { useState } from 'react'
 import toast from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
 import logo from "../assets/logo.webp";
-import { BACKEND_URL } from '../utils/utils';
 
 function CourseCreate(){
+  const  BACKEND_URL= import.meta.env.VITE_API_URL;
   const[title,setTitle]=useState("")
   const[description,setDescription]=useState("")
   const[price,setPrice]=useState("")

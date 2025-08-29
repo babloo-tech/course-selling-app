@@ -2,9 +2,9 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import toast from 'react-hot-toast'
 import { Link, useNavigate, useParams } from 'react-router-dom'
-import { BACKEND_URL } from '../utils/utils'
 
 function OurCourses() {
+  const  BACKEND_URL= import.meta.env.VITE_API_URL;
   const[courses,setCourses]=useState([])
   const[loading,setLoading]=useState(true)
   const navigate=useNavigate()

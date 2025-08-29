@@ -13,11 +13,9 @@ import { RiAdminFill } from "react-icons/ri";
 import logo from '../assets/logo.webp'
 import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
-import { BACKEND_URL } from "../utils/utils";
-
 
 function Courses() {
-
+  const  BACKEND_URL= import.meta.env.VITE_API_URL;
   const[courses,setCourses]=useState([])  //fetch course store data 1st
   const[search,setSearch]=useState("")  // serch value from form
   const[searchCourse,setSearchCourse]=useState([])  // search courses data

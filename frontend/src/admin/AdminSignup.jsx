@@ -5,10 +5,9 @@ import logo from '../assets/logo.webp'
 import { Link ,useNavigate } from 'react-router-dom'
 import axios from "axios"
 import toast from 'react-hot-toast'
-import { BACKEND_URL } from '../utils/utils'
 
 function AdminSignup() {
-
+  const  BACKEND_URL= import.meta.env.VITE_API_URL;
   const[firstName,setFirstName]=useState("")
   const[lastName,setLastName]=useState("")
   const[email,setEmail]=useState("")
@@ -55,7 +54,7 @@ function AdminSignup() {
          </div>
       </header>
          {/* singup form */}
-         <div className='bg-gray-900 p-8 rounded-lg shadow-lg w-[500px] mt-20'>
+         <div className='bg-gray-900 p-8 rounded-lg shadow-lg w-[500px] sm:mt-20'>
            <h2 className='text-2xl font-bold mb-4 text-center'>
              Welcome to <span className='text-orange-500'>CourseHub</span> 
            </h2>

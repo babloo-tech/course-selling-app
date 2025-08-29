@@ -7,10 +7,9 @@ import { RiHome2Fill } from "react-icons/ri";
 import logo from '../assets/logo.webp'
 import { IoLogIn, IoLogOut } from "react-icons/io5";
 import { HiMenu, HiX } from "react-icons/hi";
-import { BACKEND_URL } from "../utils/utils";
-
 
 function Purchases() {
+  const  BACKEND_URL= import.meta.env.VITE_API_URL;
   const[purchases,setPurchase]=useState([])
   const[isLoggedIn,setIsLoggedIn]=useState(false)
   const[errorMessage,setErrorMessage]=useState(true)

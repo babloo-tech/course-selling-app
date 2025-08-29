@@ -8,15 +8,18 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import toast from "react-hot-toast";
-import { BACKEND_URL } from "../utils/utils";
+
 
 function Home() {
+  const  BACKEND_URL= import.meta.env.VITE_API_URL;
+  console.log(BACKEND_URL)
   const [courses, setCourses] = useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [slidesToShow, setSlidesToShow] = useState(1); // default small screen
 
   //  Detect viewport width
   useEffect(() => {
+       console.log(courses)
     const updateSlides = () => {
       const width = window.innerWidth;
       if (width >= 1280) setSlidesToShow(4);
@@ -75,6 +78,7 @@ function Home() {
           { withCredentials: true }
         );
         setCourses(response.data.courses);
+     
       } catch (error) {
         console.log("error in fecthCourse", error);
       }
@@ -92,7 +96,7 @@ function Home() {
         <header className="flex justify-between items-center ">
           <div className="flex items-center space-x-2 ">
             <img src={logo} alt="home image" className="h-10 w-10 rounded-full" />
-            <h1 className="text-md sm:text-2xl font-bold text-orange-500 ">
+            <h1 className="text-lg sm:text-2xl font-bold text-orange-500 ">
               CourseHub
             </h1>
           </div>
@@ -124,8 +128,8 @@ function Home() {
         </header>
 
         {/*Main Section */}
-        <section className="text-center py-6 ">
-          <h1 className="text-4xl font-extrabold text-orange-500 mb-3">
+        <section className="text-center py-4 sm:py-8">
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-orange-500 mb-3">
             CourseHub
           </h1>
           <p className="text-gray-400">
@@ -142,7 +146,7 @@ function Home() {
               to={"https://online-courseapp.vercel.app/"}
               className=" block  w-50  sm:inline px-6 py-3 bg-white text-black font-semibold rounded hover:bg-green-500 duration-300 hover:text-black"
             >
-              Course Videos
+              Courses Videos 
             </Link>
           </div>
         </section>

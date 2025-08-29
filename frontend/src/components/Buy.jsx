@@ -4,9 +4,9 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import toast from 'react-hot-toast'
 import { useNavigate, useParams, Link } from 'react-router-dom'
-import { BACKEND_URL } from '../utils/utils'
 
 function Buy() {
+  const  BACKEND_URL= import.meta.env.VITE_API_URL;
   const {courseId} =useParams()
   const[loading,setLoading]=useState(false)
   const navigate=useNavigate()

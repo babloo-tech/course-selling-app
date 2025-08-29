@@ -3,12 +3,12 @@ import { useEffect, useState } from 'react'
 import toast from 'react-hot-toast'
 import { useNavigate, useParams } from 'react-router-dom'
 import logo from "../assets/logo.webp";
-import { BACKEND_URL } from '../utils/utils';
 
 function UpdateCourses() {
+  const  BACKEND_URL= import.meta.env.VITE_API_URL;
   const {id}=useParams()
   const navigate=useNavigate()
-    const[title,setTitle]=useState("")
+  const[title,setTitle]=useState("")
   const[description,setDescription]=useState("")
   const[price,setPrice]=useState("")
   const[image,setImage]=useState("") // null is best here
