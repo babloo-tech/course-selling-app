@@ -20,10 +20,13 @@ function Login() {
       {withCredentials:true,
        headers:{"Content-Type":"application/json"}
       })
+
+      localStorage.setItem("user",JSON.stringify(response.data))
       console.log("Login successfull",response.data)
       toast.success(response.data.message)
-      localStorage.setItem("user",JSON.stringify(response.data))
-      navigate("/")
+       window.location.reload()
+      navigate("/courses")
+
   }catch (error) {
   if (error.response) {
     toast.error(

@@ -195,13 +195,13 @@ function Home() {
               <div className="mt-3 ml-2 md:ml-8">
                 <p className="mb-2">Follow us</p>
                 <div className="flex space-x-4">
-                  <a href="">
+                  <a href="https://www.facebook.com/bablookumar.chaurasiya.12">
                     <FaFacebook className="text-2xl hover:text-blue-400 duration-300" />
                   </a>
-                  <a href="">
+                  <a href="https://www.instagram.com/its_babloo_chaurasiya/">
                     <FaInstagram className="text-2xl hover:text-pink-600 duration-300" />
                   </a>
-                  <a href="">
+                  <a href="https://x.com/home">
                     <FaTwitter className="text-2xl hover:text-blue-600 duration-300" />
                   </a>
                 </div>
