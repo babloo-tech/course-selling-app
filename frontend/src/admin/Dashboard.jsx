@@ -1,11 +1,24 @@
 
 import logo from '../assets/logo.webp'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate, } from 'react-router-dom'
 import axios from 'axios';
 import toast from 'react-hot-toast';
+import { useEffect } from 'react';
+
 
 function Dashboard() {
 const  BACKEND_URL= import.meta.env.VITE_API_URL;
+
+// check isAdmi login
+const navigate=useNavigate()
+ useEffect(()=>{
+  const admin=localStorage.getItem('admin')
+  const token=admin?.token;
+  if(!token){
+   navigate('/admin/login')
+  }
+},[navigate])
+
 const handleLogout = async () => {
   try {
     const response = await axios.get(`${BACKEND_URL}/admin/logout`, {
@@ -18,6 +31,8 @@ const handleLogout = async () => {
     toast.error(error.response?.data?.errors || "Error in logout");
   }
 };
+
+
 
   return (
     <div className='h-screen flex'>

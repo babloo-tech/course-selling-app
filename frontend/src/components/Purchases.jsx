@@ -1,5 +1,5 @@
 import { useState,useEffect } from "react";
-import { Link} from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import axios from "axios";
 import { IoMdSettings } from "react-icons/io";
 import { FaDiscourse, FaDownload } from "react-icons/fa6";
@@ -13,8 +13,9 @@ function Purchases() {
   const[purchases,setPurchase]=useState([])
   const[isLoggedIn,setIsLoggedIn]=useState(false)
   const[errorMessage,setErrorMessage]=useState(true)
-   const[loading,setLoading]=useState(true) // processig situation
+  const[loading,setLoading]=useState(true) // processig situation
   const[isSidebarOpen, setIsSidebarOpen] = useState(false); // State to toggle sidebar
+  const navigte=useNavigate()
 
   console.log("purchases",purchases) 
 
@@ -27,6 +28,8 @@ function Purchases() {
        setIsLoggedIn(true)
     }else{
       setIsLoggedIn(false)
+      navigte('/login')
+      
     }
   },[])
 

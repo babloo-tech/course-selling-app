@@ -14,8 +14,8 @@ import CourseCreate from "./admin/CourseCreate";
 import UpdateCourses from "./admin/UpdateCourses";
 import OurCourses from "./admin/OurCourses";
 function App() {
-  const user=JSON.parse(localStorage.getItem('user'))
-  const admin=JSON.parse(localStorage.getItem('admin'))
+  // const user=JSON.parse(localStorage.getItem('user'))
+  // const admin=JSON.parse(localStorage.getItem('admin'))
 
   return (
     <div>
@@ -25,12 +25,12 @@ function App() {
          <Route path='signup' element={<Signup/>}/>
          {/* other routes */}
          <Route path="/courses" element={<Courses/>}/>
-         <Route path="/purchases" element={user ? <Purchases/>:<Navigate to={'/login'} />}/>
+         <Route path="/purchases" element={<Purchases/>}/>
          <Route path="/buy/:courseId" element={<Buy/>}/>
            {/* Admin routes */}
          <Route path="/admin/signup" element={<AdminSignup/>}/>
          <Route path="/admin/login" element={<AdminLogin/>}/>
-         <Route path="/admin/dashboard" element={admin ? <Dashboard/>:<Navigate to={'/admin/login'}/>}/>
+         <Route path="/admin/dashboard" element={<Dashboard/>}/>
          <Route path="/admin/create-course" element={<CourseCreate/>}/>
          <Route path="/admin/update-course/:id" element={<UpdateCourses/>}/>
          <Route path="/admin/our-courses" element={<OurCourses/>}/>
