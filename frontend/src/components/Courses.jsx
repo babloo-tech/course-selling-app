@@ -130,7 +130,7 @@ function Courses() {
                 <IoMdSettings className="mr-2" /> Settings
               </Link>
             </li>
-            <li>
+            <li className="mb-4">
               {isLoggedIn ? (
                 <Link to={"/"}
                   
@@ -140,12 +140,12 @@ function Courses() {
                   <IoLogOut className="mr-2" /> Logout
                 </Link>
               ) : (
-                <Link to={"/login"} className="flex items-center">
+                <Link to={"/login"} className="flex items-center hover:text-blue-500">
                   <IoLogIn className="mr-2" /> Login
                 </Link>
               )}
             </li>
-             <Link className="mt-4  hover:text-blue-500">
+             <Link className="mb-4 hover:text-blue-500">
               <Link to={"/admin/login"} className="flex items-center">
                 <RiAdminFill className="mr-2" /> Admin
               </Link>

@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { useState } from 'react'
 import toast from 'react-hot-toast'
-import { useNavigate } from 'react-router-dom'
+import {Link, useNavigate } from 'react-router-dom'
 import logo from "../assets/logo.webp";
 
 function CourseCreate(){

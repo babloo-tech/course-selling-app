@@ -54,7 +54,7 @@ function AdminLogin() {
           <h1 className='text-2xl font-bold text-orange-500 hover:text-blue-500'>CourseHub</h1>
          </Link>
          <div  className='space-x-4 '> 
-          <Link  to={"#"} className='block mb-6 sm:inline-block bg-transparent hover:bg-blue-800 py-2 px-4 border border-white   text-white rounded'>Singnup</Link>
+          <Link  to={"#"} className=' mb-6 inline-block bg-transparent hover:bg-blue-800 py-2 px-4 border border-white   text-white rounded'>Singnup</Link>
           <Link to={"/courses"} className='bg-orange-500 hover:bg-blue-800 py-2 px-4 border border-white text-white rounded'>Join now</Link>
          </div>
       </header>
