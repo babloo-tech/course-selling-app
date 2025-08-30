@@ -111,24 +111,24 @@ function Courses() {
         <nav>
           <ul>
             <li className="mb-4  hover:text-blue-500">
-              <a href="/" className="flex items-center">
+              <Link to={"/"} className="flex items-center">
                 <RiHome2Fill className="mr-2 " /> Home
-              </a>
+              </Link>
             </li>
             <li className="mb-4">
-              <a href="#" className="flex items-center text-blue-500">
+              <Link to={"#"} className="flex items-center text-blue-500">
                 <FaDiscourse className="mr-2" /> Courses
-              </a>
+              </Link>
             </li>
             <li className="mb-4  hover:text-blue-500 ">
-              <a href="/purchases" className="flex items-center">
+              <Link to={"/purchases"} className="flex items-center">
                 <FaDownload className="mr-2" /> Purchases
-              </a>
+              </Link>
             </li>
             <li className="mb-4  hover:text-blue-500">
-              <a href="#" className="flex items-center">
+              <Link to={"#"} className="flex items-center">
                 <IoMdSettings className="mr-2" /> Settings
-              </a>
+              </Link>
             </li>
             <li>
               {isLoggedIn ? (
@@ -145,11 +145,11 @@ function Courses() {
                 </Link>
               )}
             </li>
-             <li className="mt-4  hover:text-blue-500">
-              <a href="/admin/login" className="flex items-center">
+             <Link className="mt-4  hover:text-blue-500">
+              <Link to={"/admin/login"} className="flex items-center">
                 <RiAdminFill className="mr-2" /> Admin
-              </a>
-            </li>
+              </Link>
+            </Link>
           </ul>
         </nav>
       </aside>

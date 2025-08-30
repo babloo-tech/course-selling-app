@@ -1,4 +1,4 @@
-import  { useEffect, useState } from 'react'
+import  { useState } from 'react'
 import logo from '../assets/logo.webp'
 import { Link ,useNavigate } from 'react-router-dom'
 import axios from "axios"
@@ -42,17 +42,17 @@ function Signup() {
      <div className='h-screen flex  text-white items-center justify-center container mx-auto p-10 '>
          {/* Header */}
         <header className='flex justify-between items-center w-full absolute top-0 p-5'>
-         <div className='flex items-center space-x-2'>
-          <img src={logo} alt="" className='h=10 w-10 rounded-full' />
-          <h1 className='text-2xl font-bold text-orange-500'>CourseHub</h1>
-         </div>
+         <Link to={'/'} title='back to home' className='flex items-center space-x-2'>
+          <img src={logo} alt="" className='h-10 w-10 rounded-full' />
+          <h1 className='text-2xl font-bold text-orange-500 hover:text-blue-500'>CourseHub</h1>
+         </Link>
          <div className='space-x-4'> 
           <Link to={"/login"} className='bg-transparent hover:bg-blue-800 py-2 px-4 border border-white text-white rounded'>Login</Link>
           <Link to={"/courses"} className='bg-orange-500 hover:bg-blue-800 py-2 px-4 border border-white text-white rounded'>Join now</Link>
          </div>
       </header>
          {/* singup form */}
-         <div className='bg-gray-900 p-8 rounded-lg shadow-lg w-[500px]  sm:mt-20'>
+         <div className='bg-gray-900 p-8 rounded-lg shadow-lg  w-[340px] sm:w-[540px] fixed top-25'>
            <h2 className='text-2xl font-bold mb-4 text-center'>
              Welcome to <span className='text-orange-500'>CourseHub</span> 
            </h2>

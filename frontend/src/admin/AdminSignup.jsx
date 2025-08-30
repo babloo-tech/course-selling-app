@@ -1,6 +1,5 @@
-import React from 'react'
 
-import  { useEffect, useState } from 'react'
+import  { useState } from 'react'
 import logo from '../assets/logo.webp'
 import { Link ,useNavigate } from 'react-router-dom'
 import axios from "axios"
@@ -44,10 +43,10 @@ function AdminSignup() {
      <div className='h-screen flex  text-white items-center justify-center container mx-auto p-10 '>
          {/* Header */}
         <header className='flex justify-between items-center w-full absolute top-0 p-5'>
-         <div className='flex items-center space-x-2'>
+         <Link to={'/'} title='back to home' className='flex items-center space-x-2'>
           <img src={logo} alt="" className='h=10 w-10 rounded-full' />
-          <h1 className='text-2xl font-bold text-orange-500'>CourseHub</h1>
-         </div>
+          <h1 className='text-2xl font-bold text-orange-500 hover:text-blue-500'>CourseHub</h1>
+         </Link>
          <div className='space-x-4'> 
           <Link to={"/admin/login"} className='bg-transparent hover:bg-blue-800 py-2 px-4 border border-white text-white rounded'>Login</Link>
           <Link to={"#"} className='bg-orange-500 hover:bg-blue-800 py-2 px-4 border border-white text-white rounded'>Join now</Link>

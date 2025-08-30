@@ -66,7 +66,7 @@ function CourseCreate(){
   return (
     <div className='min-h-screen py-4'>
       <div className='max-w-2xl mx-auto p-6 border rounded-lg bg-gray-100/40 shadow-2xl'>
-        <h3 className='text-2xl text-center font-bold mb-2'> <img src={logo} alt="" className="h-10 mr-2 inline w-10 rounded-full" />Create Course</h3>
+        <Link to={'/admin/dashboard'} className='text-2xl hover:text-blue-500 text-center block font-bold mb-2'> <img src={logo} alt="" className="h-10 mr-2 inline w-10 rounded-full" />Create Course</Link>
         <form onSubmit={handleCreateCourse} className='space-y-2'>
            <div className='space-y-2'> 
             <label className='block font-bold text-lg'>Title</label>
