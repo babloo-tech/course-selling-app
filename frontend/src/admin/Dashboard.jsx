@@ -8,22 +8,24 @@ import { useEffect, useState } from 'react';
 
 function Dashboard() {
 const  BACKEND_URL= import.meta.env.VITE_API_URL;
-
+const navigate=useNavigate()
   // set admin profile
 const[isProfileOpen,setIsProfileOpen]=useState(false)
 const[adminId,setAdminId]=useState(null)
 const[adminName,setAdminName]=useState(null)
 
-useEffect(()=>{
-  const navigate=useNavigate()
-  const admin=localStorage.getItem('admin')
-  if(!admin){
-   navigate('/admin/login')
-  }else{
-    navigate('/admin/dashboard')
-  }
-
-})
+  //  Protect route
+  useEffect(() => {
+    const admin = localStorage.getItem('admin');
+    if (!admin) {
+      toast.error("Please login to access Admin Dashboard");
+      navigate('/admin/login', { replace: true });
+    } else {
+      const adminData = JSON.parse(admin);
+      setAdminId(adminData?.admin?.email);
+      setAdminName(adminData?.admin?.firstName);
+    }
+  }, [navigate]);
 
 const handleLogout = async () => {
   try {

@@ -44,7 +44,8 @@ function Buy() {
      setLoading(false)
      if(error.response?.status===400){
       toast.error('you have already purchase this course')
-     navigate('/purchases')
+      navigate('/purchases',{replace:true})
+      return
      }else{
       setError(error?.response?.data?.errors)
      }
@@ -124,7 +125,7 @@ function Buy() {
     console.log(response.data)
   }).catch((error)=>{
      console.log(error)
-     toast.error("Error in making payment")
+     toast.error("error occurs in making payment")
   })
   toast.success("Payment Successfull")
   navigate("/purchases")
