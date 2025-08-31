@@ -244,7 +244,7 @@ const toggleProfile = () => {
                   <div className="flex justify-between items-center mb-4">
                     <span className="font-bold text-xl">
                       ₹{course.price}{" "}
-                      <span className="text-green-500 line-through">5999</span>
+                      <span className="text-green-500 line-through">499</span>
                     </span>
                     <span className="text-green-600">20% off</span>
                   </div>

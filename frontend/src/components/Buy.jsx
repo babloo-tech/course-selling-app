@@ -180,7 +180,7 @@ function Buy() {
                         }}
                       />
                       {/* disable button when loading */}
-                      <button type='sumbit' disabled={!stripe || loading}
+                      <button type='submit' disabled={!stripe || loading}
                        className='mt-8 w-full bg-indigo-500 text-white py-2 rounded-md hover:bg-indigo-600 transition duration-200'> {loading ? "Processing... ":"Pay"}
                       </button>
                     </form>
