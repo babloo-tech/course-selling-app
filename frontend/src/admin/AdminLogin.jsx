@@ -28,7 +28,6 @@ function AdminLogin() {
        toast.success(response.data.message)
        console.log("Login successfull",response.data)
        navigate("/admin/dashboard")
-        window.location.reload()
     
 
   }catch (error) {
@@ -49,12 +48,12 @@ function AdminLogin() {
      <div className='h-screen flex  text-white items-center justify-center container mx-auto p-10 '>
          {/* Header */}
         <header className='flex justify-between items-center w-full absolute top-0 p-5'>
-         <Link to={'/'} title='back to home' className='flex items-center space-x-2'>
+         <Link to={'/courses'} title='back to home' className='flex items-center space-x-2'>
           <img src={logo}  className='h-10 w-10 rounded-full' />
           <h1 className='text-2xl font-bold text-orange-500 hover:text-blue-500'>CourseHub</h1>
          </Link>
          <div  className='space-x-4 '> 
-          <Link  to={"#"} className=' mb-6 inline-block bg-transparent hover:bg-blue-800 py-2 px-4 border border-white   text-white rounded'>Singnup</Link>
+          <Link  to={"#"} className=' mb-6 inline-block bg-transparent hover:bg-blue-800 py-2 px-4 border border-white   text-white rounded'>Signup</Link>
           <Link to={"/courses"} className='bg-orange-500 hover:bg-blue-800 py-2 px-4 border border-white text-white rounded'>Join now</Link>
          </div>
       </header>

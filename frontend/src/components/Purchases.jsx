@@ -15,6 +15,11 @@ function Purchases() {
   const[errorMessage,setErrorMessage]=useState(true)
   const[loading,setLoading]=useState(true) // processig situation
   const[isSidebarOpen, setIsSidebarOpen] = useState(false); // State to toggle sidebar
+
+  const[isProfileOpen,setIsProfileOpen]=useState(false) // user profiles
+  const[userName,setUserName]=useState(null)
+  const[userId,setUserId]=useState(null)
+
   const navigte=useNavigate()
 
   console.log("purchases",purchases) 
@@ -79,6 +84,19 @@ function Purchases() {
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
+
+  useEffect(()=>{
+   const userData=JSON.parse(localStorage.getItem('user'))
+   if(userData){
+    setUserId(userData?.user?.email)
+    setUserName(userData?.user?.firstName)
+   }
+  })
+
+  const handleProfile=()=>{
+    setIsProfileOpen(!isProfileOpen)
+  }
+
   return (
    
     <div className="flex h-screen">
@@ -96,9 +114,25 @@ function Purchases() {
               isSidebarOpen ? "translate-x-0" : "-translate-x-full"
             } md:translate-x-0 md:static`}
           >
-            <div className="flex items-center mb-10 mt-10 md:mt-0">
+            <div className="relative">
+             <div onClick={handleProfile} className="flex items-center mb-10 mt-10 md:mt-0 cursor-pointer">
               <img src={logo} alt="Profile" className="rounded-full h-12 w-12" />
+             </div>
+             {isProfileOpen && (
+               <div className="absolute z-1  left-0 top-12 w-60 bg-white border border-gray-200 rounded-lg shadow-lg p-3">
+
+                {userId ? (
+                  <div>
+                     <p className="font-semibold">User Name:<span className="font-normal mb-1">{userName}</span></p>
+                     <p className="font-semibold">User ID:<span className="font-normal">{userId}</span></p>
+                  </div>
+                ):(
+                 <p className="text-sm text-gray-500">Not Logged In</p>
+                )}
+               </div>
+              )}
             </div>
+
             <nav>
               <ul>
                 <li className="mb-4  hover:text-blue-500">

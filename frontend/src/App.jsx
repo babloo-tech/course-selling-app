@@ -14,9 +14,7 @@ import CourseCreate from "./admin/CourseCreate";
 import UpdateCourses from "./admin/UpdateCourses";
 import OurCourses from "./admin/OurCourses";
 function App() {
-  // const user=JSON.parse(localStorage.getItem('user'))
-  // const admin=JSON.parse(localStorage.getItem('admin'))
-
+  
   return (
     <div>
       <Routes>

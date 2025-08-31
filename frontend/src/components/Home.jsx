@@ -48,7 +48,7 @@ function Home() {
   // token
   useEffect(() => {
     const token = localStorage.getItem("user");
-    setIsLoggedIn(!!token);
+    setIsLoggedIn(token);
   }, []);
 
   // logout

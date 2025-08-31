@@ -23,6 +23,10 @@ function Courses() {
   const[isLoggedIn,setIsLoggedIn]=useState(false)
   const[loading,setLoading]=useState(true)
   const[isSidebarOpen, setIsSidebarOpen] = useState(false); // State to toggle sidebar
+
+  const[isProfileOpen,setIsProfileOpen]=useState(false) // user profiles
+  const[userName,setUserName]=useState(null)
+  const[userId,setUserId]=useState(null)
   const navigate=useNavigate()
 
   console.log("courses data",courses)
@@ -52,6 +56,19 @@ function Courses() {
   }
 };
 
+  // when component loads, check user info
+  useEffect(() => {
+  const userData =JSON.parse(localStorage.getItem('user')) // convert to object
+  if (userData) {
+    setUserId(userData?.user?.email); 
+    setUserName(userData?.user?.firstName) 
+  } 
+}, []);
+
+// toggle function(event) for profile
+const toggleProfile = () => {
+  setIsProfileOpen(!isProfileOpen);
+};
 // fetch courses
   useEffect(()=>{
         const fetchCourses= async()=>{
@@ -172,7 +189,25 @@ function Courses() {
               </button>
             </div>
 
-            <FaCircleUser className="text-4xl text-blue-600" />
+            <div className="relative">
+              <FaCircleUser className="text-4xl text-blue-600 hover:text-blue-800 cursor-pointer" 
+              onClick={toggleProfile}/>
+
+            {/* Dropdown */}
+            {isProfileOpen && (
+              <div className="absolute z-1  right-0 mt-2 w-60 bg-white border border-gray-200 rounded-lg shadow-lg p-3"
+              >
+                {userId ? (
+                  <div className="text-gray-700 text-sm  ">
+                    <p className="font-semibold  mb-1">User Name: <span className="font-normal">{userName}</span></p> 
+                    <p className="font-semibold">User ID: <span className="font-normal">{userId}</span></p>
+                  </div>
+                ) : (
+                  <p className="text-gray-500 text-sm">Not Logged In</p>
+                )}
+              </div>
+            )}
+          </div>
           </div>
         </header>
 
