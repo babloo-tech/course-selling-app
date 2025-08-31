@@ -232,7 +232,7 @@ const toggleProfile = () => {
                   <img 
                     src={course.image.url}
                     alt={course.title}
-                    className="rounded mb-5 "
+                    className="h-50 object-cover w-full rounded-t-lg"
                     
                   />
                   <h2 className="font-bold text-lg mb-2">{course.title}</h2>

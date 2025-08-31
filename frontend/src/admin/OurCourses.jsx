@@ -62,7 +62,7 @@ if(loading){
 
   return (
     <div className='bg-gray-100 p-8 space-y-4'>
-      <h1 className='text-3xl font-bold text-center mb-8 top-0 fixed w-full z-1    bg-gray-400 p-4 '>Our Courses</h1>
+      <h1 className='text-3xl font-bold text-center mb-8 top-0 fixed w-full z-1 bg-gray-400 p-4 '>Our Courses</h1>
       <Link to="/admin/dashboard" f className="bg-orange-400 block mt-10 w-40  py-3 px-4 rounded-lg text-white z-1 hover:bg-orange-900 fixed transition duration-200">Go to Dashboard
       </Link>
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-25 gap-6'>
