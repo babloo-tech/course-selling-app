@@ -19,7 +19,6 @@ function Home() {
 
   //  Detect viewport width
   useEffect(() => {
-       console.log(courses)
     const updateSlides = () => {
       const width = window.innerWidth;
       if (width >= 1280) setSlidesToShow(4);
@@ -91,7 +90,7 @@ function Home() {
 //bg-gradient-to-r from-black to-blue-950
   return (
     <div className="bg-gradient-to-r from-indigo-950 via-purple-900 to-blue-950 ">
-      <div className="sm:h-screen text-white container mx-auto p-12 ">
+      <div className="sm:h-screen text-white container mx-auto sm:p-12 p-9 ">
         {/*Header*/}
         <header className="flex justify-between items-center ">
           <div className="flex items-center space-x-2 ">
