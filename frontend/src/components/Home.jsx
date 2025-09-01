@@ -90,7 +90,7 @@ function Home() {
 //bg-gradient-to-r from-black to-blue-950
   return (
     <div className="bg-gradient-to-r from-indigo-950 via-purple-900 to-blue-950 ">
-      <div className="sm:h-screen text-white container mx-auto sm:p-12 p-9 ">
+      <div className="sm:min-h-screen xl:h-screen text-white container mx-auto sm:p-12 p-9 ">
         {/*Header*/}
         <header className="flex justify-between items-center ">
           <div className="flex items-center space-x-2 ">
@@ -158,7 +158,7 @@ function Home() {
                 <div className="rounded-2xl relative flex-shrink-0 h-60 transition-transform duration-300 transform hover:scale-105 bg-gray-900 hover:shadow-lg shadow-orange-500/50">
                   <div className="overflow-hidden">
                     <img
-                      className="h-25 items-center w-full object-contain"
+                      className="h-24 items-center w-full object-contain"
                       src={course.image.url}
                       alt={course.title}
                     />
