@@ -142,7 +142,7 @@ function Home() {
               Explore Courses
             </Link>
             <Link
-              to={"https://online-courseapp.vercel.app/"}
+              to={"https://online-courseapp.vercel.app/user-dashboard"}
               className=" block  w-50  sm:inline px-6 py-3 bg-white text-black font-semibold rounded hover:bg-green-500 duration-300 hover:text-black"
             >
               Courses Videos 
