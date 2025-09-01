@@ -200,7 +200,7 @@ function Home() {
                   <a href="https://www.instagram.com/its_babloo_chaurasiya/">
                     <FaInstagram className="text-2xl hover:text-pink-600 duration-300" />
                   </a>
-                  <a href="https://x.com/home">
+                  <a href="https://x.com/Babloochau81254">
                     <FaTwitter className="text-2xl hover:text-blue-600 duration-300" />
                   </a>
                 </div>
