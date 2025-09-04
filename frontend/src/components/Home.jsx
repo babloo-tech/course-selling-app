@@ -90,7 +90,7 @@ function Home() {
 //bg-gradient-to-r from-black to-blue-950
   return (
     <div className="bg-gradient-to-r from-indigo-950 via-purple-900 to-blue-950 ">
-      <div className="sm:min-h-screen xl:h-screen text-white container mx-auto sm:p-12 p-9 ">
+      <div className=" xl:h-screen min-h-screen  text-white container mx-auto sm:p-12 p-9 ">
         {/*Header*/}
         <header className="flex justify-between items-center ">
           <div className="flex items-center space-x-2 ">
@@ -137,13 +137,13 @@ function Home() {
           <div className="mt-5 space-x-4 flex  justify-center align-center ">
             <Link
               to={"/courses"}
-              className=" block w-50 sm:inline px-6 py-3 bg-green-500 text-white font-semibold rounded hover:bg-white duration-300 hover:text-black"
+              className="block w-50 sm:inline px-4 py-3 bg-green-500 text-white font-semibold rounded hover:bg-white duration-300 hover:text-black"
             >
               Explore Courses
             </Link>
             <Link
-              to={"https://online-courseapp.vercel.app/user-dashboard"}
-              className=" block  w-50  sm:inline px-6 py-3 bg-white text-black font-semibold rounded hover:bg-green-500 duration-300 hover:text-black"
+              to={"https://videolibraryapp.vercel.app/user-dashboard"}
+              className=" block  w-50  sm:inline px-4 py-3 bg-white text-black font-semibold rounded hover:bg-green-500 duration-300 hover:text-black"
             >
               Courses Videos 
             </Link>
